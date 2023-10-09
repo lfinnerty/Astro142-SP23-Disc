@@ -48,3 +48,22 @@ class foobar():
 	def foo_greater(self):
 		''' Returns an array of whether foo is > bar '''
 		return self.foo > self.bar
+
+class foobarbaz(foobar):
+	def __init__(self, foo, bar=None, baz=None):
+		### Call the superclass constructor
+		super().__init__(foo,bar)
+		### Add the new attribute for the subclass
+		if baz is not None:
+			assert baz.shape == foo.shape, 'Shapes must match!'
+			self.baz = baz
+		else:
+			self.baz  = np.zeros(baz.shape)
+	def set_baz(self,newbaz):
+		if newbaz.shape == self.baz.shape:
+			self.baz = newbaz
+		else:
+			raise ValueError('Shapes of foo and baz must match!')
+	def foo_greater(self):
+		''' Override the parent method '''
+		return self.foo > self.baz
