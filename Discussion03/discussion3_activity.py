@@ -2,15 +2,63 @@ import numpy as np
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
 
-def linear_residual(pars, xpts, ypts):
-	model = pars[0] + pars[1]*xpts
-	return np.sum((ypts-model)**2)
+def calc_residual(pars, modelfunc, xpts, data):
+	''' Modelfunc is a callable (function) that takes xpts and makes the model '''
+	model = modelfunc(pars,xpts)
+	return np.sum((model-data)**2)
+
+def linear_model(pars, xpts):
+	return pars[0] + pars[1]*xpts
+
+def quadratic_model(pars,xpts):
+	return pars[0]+ pars[1]*xpts + pars[2]*xpts**2
 
 class PolynomialModel():
-	pass
+	def __init__(self, degree, xpts):
+		self.degree = degree
+		self.xpts = xpts
+		self.modpts = np.zeros(self.xpts.size)
+
+	def calc_model(self, coeffs):
+		### Re-initialize modpts if already calculated
+		if np.sum(np.abs(self.modpts) > 0):
+			self.modpts = np.zeros(self.xpts.size)
+		for i in range(self.degree+1):
+			self.modpts += coeffs[i]*self.xpts**i
+
+	def get_model(self):
+		return self.modpts
+
 
 class Fitter():
-	pass
+	def __init__(self, xpts, ypts):
+		self.xpts = xpts
+		self.ypts = ypts
+		self.coeffs = None
+
+	def calc_residual(self, pars, modelobj):
+		### Calculate the ypts using the model object
+		modelobj.calc_model(pars)
+		model = modelobj.get_model()
+		return np.sum((model-self.ypts)**2)
+
+	def fit(self, model):
+		### Initial guess is all zeros
+		### Check that model and data have same xpts
+		### Or maybe change the model class so you don't have 
+		### to worry about this
+		self.coeffs = np.empty(model.degree+1)
+		if np.sum(np.abs(model.xpts-self.xpts) > 1e-14):
+			raise InputError('Model x points do not match data!')
+		p0 = np.zeros(model.degree+1)
+		res = minimize(self.calc_residual, p0, args=(model,))
+		self.coeffs = res.x
+
+	def get_best_model(self):
+		bestmod_obj = PolynomialModel(self.coeffs.size-1, self.xpts)
+		bestmod_obj.calc_model(self.coeffs)
+		return bestmod_obj.get_model()
+
 
 
 if __name__ == '__main__':
@@ -28,19 +76,44 @@ if __name__ == '__main__':
 	### Lets do some fitting
 	### Make initial guess
 	p0 = [0, 1.]
-	res = minimize(linear_residual, p0, args=(xpts,ypts))
+	res = minimize(calc_residual, p0, args=(linear_model, xpts, ypts))
 	print(res.x)
-	best_fit = res.x[0] + res.x[1]*xpts 
+	best_fit = linear_model(res.x, xpts)
+
+	### Now do quadratic
+	p0 = [0, 1., 0.1]
+	res2 = minimize(calc_residual, p0, args=(quadratic_model, xpts, ypts))
+	print(res2.x)
+	best_fit_quad = quadratic_model(res2.x, xpts)
 
 
 	plt.scatter(xpts, ypts,color='k', label='Data')
 	plt.plot(xpts, best_fit, color='r', label='Linear fit')
+	plt.plot(xpts, best_fit_quad, color='g', label='Quadratic fit')
 	plt.legend()
 	plt.show()
 
-	### Try fitting a quadratic instead. Does the current residual
-	### function seem like the best way to do this?
+
+	### Make one fit object
+	fitobj = Fitter(xpts, ypts)
+	linear = PolynomialModel(1,xpts)
+	fitobj.fit(linear)
+	linear_best = fitobj.get_best_model()
+
+	### Now I can just make a new model and refit
+	quadratic = PolynomialModel(2, xpts)
+	fitobj.fit(quadratic)
+	quad_best = fitobj.get_best_model()
+
+	### And again
+	cubic = PolynomialModel(3,xpts)
+	fitobj.fit(cubic)
+	cubic_best = fitobj.get_best_model()
 
 
-	### Try making a class for the model and fitter. What is the advantage
-	### of setting it up this way?
+	plt.scatter(xpts, ypts,color='k', label='Data')
+	plt.plot(xpts, linear_best, color='r', label='Linear fit')
+	plt.plot(xpts, quad_best, color='g', label='Quadratic fit')
+	plt.plot(xpts, cubic_best, color='b', label='Cubic fit')
+	plt.legend()
+	plt.show()
