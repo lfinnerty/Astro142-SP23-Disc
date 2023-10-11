@@ -23,6 +23,7 @@ class PolynomialModel():
 		### Re-initialize modpts if already calculated
 		if np.sum(np.abs(self.modpts) > 0):
 			self.modpts = np.zeros(self.xpts.size)
+		### Doing this as a loop lets us handle an arbitrary degree polynomial
 		for i in range(self.degree+1):
 			self.modpts += coeffs[i]*self.xpts**i
 
@@ -34,6 +35,8 @@ class Fitter():
 	def __init__(self, xpts, ypts):
 		self.xpts = xpts
 		self.ypts = ypts
+		### Not filling this in yet, but instantiating it
+		### for clarity 
 		self.coeffs = None
 
 	def calc_residual(self, pars, modelobj):
@@ -94,18 +97,19 @@ if __name__ == '__main__':
 	plt.show()
 
 
-	### Make one fit object
+	### Make one fitter object
 	fitobj = Fitter(xpts, ypts)
+	### Now make a model, fit it, and get the best-fit
 	linear = PolynomialModel(1,xpts)
 	fitobj.fit(linear)
 	linear_best = fitobj.get_best_model()
 
-	### Now I can just make a new model and refit
+	### Now can just make a new model and refit
 	quadratic = PolynomialModel(2, xpts)
 	fitobj.fit(quadratic)
 	quad_best = fitobj.get_best_model()
 
-	### And again
+	### And again, now with a cubic
 	cubic = PolynomialModel(3,xpts)
 	fitobj.fit(cubic)
 	cubic_best = fitobj.get_best_model()
