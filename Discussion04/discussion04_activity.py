@@ -49,3 +49,5 @@ plt.show()
 
 
 ### Now a different example. 
+### Making/using a boolean array as a mask
+### 
