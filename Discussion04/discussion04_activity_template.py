@@ -99,5 +99,6 @@ plt.show()
 
 ### Make a plot of the NaN-removed array
 
+new_code =np.zeroes(100,110)
 
 ### Print the indexes of the replaced NaNs
