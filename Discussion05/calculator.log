@@ -1,0 +1,13 @@
+INFO:root:Input: 3/1, Output: 3.0
+INFO:root:Input: 4/2, Output: 2.0
+ERROR:root:Division by zero: Denominator cannot be zero.
+ERROR:root:Invalid input: Please enter integers only.
+ERROR:root:Invalid input: Please enter integers only.
+ERROR:root:Invalid input: Please enter integers only.
+INFO:root:Input: 3/2, Output: 1.5
+INFO:root:Input: 2/1, Output: 2.0
+INFO:root:Input: 4/2, Output: 2.0
+INFO:root:Input: 3/2, Output: 1.5
+ERROR:root:Division by zero: Denominator cannot be zero.
+ERROR:root:Invalid input: Please enter integers only.
+INFO:root:Input: 4/2, Output: 2.0

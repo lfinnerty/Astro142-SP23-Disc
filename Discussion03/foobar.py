@@ -58,7 +58,7 @@ class foobarbaz(foobar):
 			assert baz.shape == foo.shape, 'Shapes must match!'
 			self.baz = baz
 		else:
-			self.baz  = np.zeros(foo.shape)
+			self.baz  = np.zeros(baz.shape)
 	def set_baz(self,newbaz):
 		if newbaz.shape == self.baz.shape:
 			self.baz = newbaz
