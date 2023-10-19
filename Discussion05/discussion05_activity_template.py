@@ -6,6 +6,7 @@ if __name__ == '__main__':
 		### FIXME what happens if you enter something that isn't an int?
 		num1 = int(input('Enter numerator >> '))
 		num2 = int(input('Enter denominator >> '))
+		print('hellow world')
 		### FIXME what happens if denom is 0?
 		print(num1, '/', num2, '=', num1/num2)
 		### FIXME write the inputs/outputs and any errors encountered
