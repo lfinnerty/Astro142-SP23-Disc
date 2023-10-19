@@ -1,6 +1,10 @@
 import numpy as np
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
+#make change here discussion
+def make_change():
+    x = 1+2
+    return x
 
 def linear_residual(pars, xpts, ypts):
 	model = pars[0] + pars[1]*xpts
