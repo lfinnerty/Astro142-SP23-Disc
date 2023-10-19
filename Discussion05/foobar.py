@@ -67,3 +67,5 @@ class foobarbaz(foobar):
 	def foo_greater(self):
 		''' Override the parent method '''
 		return self.foo > self.baz
+
+""
