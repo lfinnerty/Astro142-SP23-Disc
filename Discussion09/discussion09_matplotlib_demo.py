@@ -5,6 +5,8 @@ import time
 ### Lets make a figure
 fig = plt.figure(figsize=(8,6))
 ### This is how the "active" figure is tracked for the plt interface
+### See here for switching the active figure:
+### https://stackoverflow.com/questions/7986567/matplotlib-how-to-set-the-current-figure
 print(fig.number)
 ### add an axes. 4-tuple specifies (fractional) left, bottom, width, height values
 ### This should make an axes instance with a 10% border
