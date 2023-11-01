@@ -28,4 +28,4 @@ if __name__ == '__main__':
 	### the patch something and add a legend in the upper-left corner with
 	### no bounding box
 
-	### Screenshot your plot (however far you get) and put it in the slides
+	### Save your plot as a pdf (however far you get) and upload it for the discussion assignment
