@@ -18,12 +18,12 @@ plt.show()
 z = np.sqrt(xx**2+yy**2/4)
 
 fig, axes = plt.subplots(nrows=1,ncols=1,figsize=(8,8))
-axes.contourf(z)
-plt.show()
+# axes.contourf(z)
+# plt.show()
 
 ### Lets get the x and y values in there
-axes.contour(xx,yy,z, levels=[1,2])
-plt.show()
+# axes.contour(xx,yy,z, levels=[1,2])
+# plt.show()
 
 ### What about image data? use extent
 axes.imshow(z, extent=[np.min(x),np.max(x),np.min(y),np.max(y)])
