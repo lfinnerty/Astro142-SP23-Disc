@@ -8,6 +8,8 @@ hdulst = fits.open('nspec211121_0140.fits')
 
 print(hdulst.info())
 
+# assert 1==0
+
 ### get data and header
 hdr = hdulst[0].header
 data = hdulst[0].data
@@ -15,7 +17,7 @@ print('Header:', hdr)
 print('Header target keyword, hdr[\'targname\']:', hdr['targname'])
 print('Data:', data)
 
-assert 1==0
+# assert 1==0
 
 # fig = plt.figure(figsize=(12,10))
 # ### Add axes, 1 inch border, square
@@ -64,4 +66,4 @@ ax.text(0.5,1.02, 'Do this if set_title placement is bad!', horizontalalignment=
 ### But if I want to label part of the data, do that in data coordinates
 ax.text(1550, 220, 'This looks like\na cosmic ray!', fontsize=14,color='r')
 
-# plt.show()
+plt.show()

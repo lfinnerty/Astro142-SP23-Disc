@@ -1,0 +1,17 @@
+This is a table listing targets deteced in the Keck/KPIC hot Jupiter survey. Columns are name,
+RA, Dec, period (in days), semi-major axis (in AU), JD date of the transit or inferior conjunction
+time, whether the planet has been detected with KPIC, whether the planet is eccentric, and the max
+possible Kp in km/s. 
+
+Name,	RA,	Dec,	Period ,	a,	T transit/inf conj,	KPIC detected,	Eccentric?,	Kp max 
+WASP-189,	15:02:45,	-3:01:53,	2.7240308,	    0.05053,	2456706.457,	KPIC detected,	No,	202.3
+51 Peg,	    22:27:28,	20:46:09,	4.2307969,	    0.0523,	    2455705.001,	KPIC detected,	No,	134.8
+MASCARA-1,	21:10:12,	10:44:20,	2.148787199,	0.04035,	2459798.286,	KPIC detected,	No,	204.8
+HD 149026,	16:30:30,	38:20:51,	2.8758916,	    0.0436,	    2454597.707,	KPIC detected,	No,	165.4
+KELT20/M-2,	19:38:39,	31:13:09,	3.474101086,	0.0542,	    2459441.669,	KPIC detected,	No,	170.2
+TOI 1518,	23:29:04,	67:02:05,	1.902605961,	0.0389, 	2459854.415,	KPIC detected,	No,	223
+HD 189733,	20:00:43,	22:42:39,	2.218574804,	0.031,	    2459770.41,  	KPIC detected,	No,	152.4
+WASP-74,	20:18:09,	-1:04:32,	2.1377516,	    0.03443,	2457205.938,	KPIC detected,	No,	175.7
+
+If you want to be extra annoying, you can put info at the end of the file as well, to make it even
+harder to read things in
