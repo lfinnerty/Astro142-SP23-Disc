@@ -19,7 +19,7 @@ from astropy.io import fits
 
 
 ### Load the NGC7469 spectrum. The flux and wavelength
-### are in separate FITS extensions. The wavlength is in
+### are in separate FITS extensions. The wavelength is in
 ### micron, and the flux in Jy (check the headers). 
 ### Convert the flux to erg/cm^2/s/Hz and plot it.
 ### See here for an example of converting flux units:
