@@ -64,7 +64,7 @@ if __name__ == '__main__':
 	plt.show()
 
 	### Write the residual function to fit a model to this data. Make it possible to 
-	### easily switch between an Airy and a 2D Gaussian model
+	### easily switch between an Airy and a 2D Gaussian model. Assume photon noise
 
 
 
