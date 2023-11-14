@@ -54,10 +54,10 @@ if __name__ == '__main__':
 	### Let's consider a 2-D model, such as fitting to a stellar PSF
 	### Make the grids
 	xx, yy = np.meshgrid(np.arange(512),np.arange(512))
-	true_model = AiryDisk2D(amplitude=100, x_0=124, y_0=417, radius=1.6)
+	true_model = AiryDisk2D(amplitude=100, x_0=124.3, y_0=417.8, radius=1.6)
 	clean_data = true_model(xx, yy)
 	print(clean_data.shape)
-	noise = np.random.normal(scale=np.sqrt(clean_data.flatten()), size=512**2).reshape((512,512))
+	noise = np.random.normal(scale=np.sqrt(clean_data.flatten()), size=512**2).reshape((512,512)) 
 	noisy_data = clean_data + noise
 
 	plt.imshow(noisy_data, origin='lower')
