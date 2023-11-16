@@ -23,30 +23,30 @@ if __name__ == '__main__':
 	xpts = np.linspace(-2,2,1000)
 	### What if we want a sub-portion of a complicated model?
 	complicated_model = model([8., 0., 0.2], xpts)+model([3., -1., 0.5], xpts)+model([2., 4, 3], xpts)
-	plt.plot(xpts, complicated_model)
-	plt.show()
+	# plt.plot(xpts, complicated_model)
+	# plt.show()
 
 	### Compare interpolation and direct evaluation
 	### What happens when we change k?
-	spl = interpolate.make_interp_spline(xpts,complicated_model,k=1)
+	spl = interpolate.make_interp_spline(xpts,complicated_model,k=2)
 	ival = spl(0)
-	print('Interpolated value:', ival)
+	# print('Interpolated value:', ival)
 	true_val = model([8., 0., 0.2], 0)+model([3., -1., 0.5],0)+model([2., 4, 3], 0)
-	print('True value:', true_val)
-	print('Fractional difference:', np.abs(true_val-ival)/true_val)
-
+	# print('True value:', true_val)
+	# print('Fractional difference:', np.abs(true_val-ival)/true_val)
+	# assert 1==0
 
 
 	### Now lets do some root finding. We have a function we can't 
 	### find the root of analytically. Lets use root_scalar and tell
 	### it we think the root is somewhere between -2 and 2
 	xpts = np.linspace(-2,2,100)
-	plt.plot(xpts, transcendental_function(xpts))
-	plt.show()
+	# plt.plot(xpts, transcendental_function(xpts))
+	# plt.show()
 	### So we're really trying to minimize the absolute value (or the 
 	### root of the square) of the function
 	root = optimize.root_scalar(transcendental_function,bracket=(-2,2))
-	print(root)
+	# print(root)
 
 
 	### Let's make a fake spectral line (observed at ludicrous resolution)
@@ -62,6 +62,7 @@ if __name__ == '__main__':
 	### a bit nicer, but requires a slightly different residual function
 	result = optimize.least_squares(lsq_residual, x0=[3,1,0.5], args=(xpts,ypts))
 	print(result)
+	# assert 1==0
 	print('---------------------------------------------------------------')
 	### Alternatively, can pass chi2 to minimize
 	result2 = optimize.minimize(chi2_residual, x0=[3,1,0.5],args=(xpts,ypts))
