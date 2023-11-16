@@ -15,9 +15,11 @@ def n_gauss_model(pars, x, n=5):
 def residual(pars, x, data, errs, n):
 	return (data-n_gauss_model(pars,x,n))/errs
 
-np.random.seed(42)
+
 ### Consider an overlapping set of spectral lines
 wvarr = np.linspace(2.08,2.22,num=600)
+### Note the noise will be different every time you run the script,
+### since we didn' set the random seed. Should that change the outcome?
 spec = gaussian([10,2.15,0.001],wvarr)+gaussian([3,2.12,0.01],wvarr)+gaussian([7,2.17,0.005],wvarr)+gaussian([2,2.155,0.02],wvarr)+gaussian([2,2.18,0.01],wvarr)
 spec = spec+np.random.normal(scale=1.0,size=spec.size)
 errs = np.ones(spec.size)
