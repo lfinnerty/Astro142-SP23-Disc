@@ -1,0 +1,85 @@
+# Auto-generated calibration association file using PypeIt version:  1.14.0
+# UTC 2023-11-21T04:06:25.743
+# NOTE: DET01 is a placeholder for the reduced detectors/mosaics
+A:
+  --:
+    dichroic: d55
+    dispname: 600/4310
+  0:
+    arc:
+      proc:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Arc_A_0_DET01.fits
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/WaveCalib_A_0_DET01.fits
+      raw:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b1.fits.gz
+    bias:
+      proc:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Bias_A_0_DET01.fits
+      raw:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b14.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b15.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b16.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b17.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b18.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b19.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b20.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b21.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b22.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b23.fits.gz
+    illumflat:
+      proc:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Flat_A_0_DET01.fits
+      raw:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b10.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b11.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b12.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b13.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b3.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b4.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b5.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b6.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b7.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b8.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b9.fits.gz
+    pixelflat:
+      proc:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Flat_A_0_DET01.fits
+      raw:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b10.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b11.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b12.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b13.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b3.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b4.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b5.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b6.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b7.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b8.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b9.fits.gz
+    science:
+    - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b27.fits.gz
+    - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b28.fits.gz
+    standard:
+    - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b24.fits.gz
+    tilt:
+      proc:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Tiltimg_A_0_DET01.fits
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Tilts_A_0_DET01.fits
+      raw:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b1.fits.gz
+    trace:
+      proc:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Edges_A_0_DET01.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Slits_A_0_DET01.fits.gz
+      raw:
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b10.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b11.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b12.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b13.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b3.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b4.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b5.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b6.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b7.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b8.fits.gz
+      - /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/raw/b9.fits.gz

@@ -19,8 +19,9 @@ sample_stds = np.empty(x_arr.size)
 for i in range(x_arr.size):
   subsample = x_arr[np.arange(x_arr.size)!=i]
   sample_means[i] = np.mean(subsample)
-  sample_stds[i]  = np.std(subsample)s
+  sample_stds[i]  = np.std(subsample)
   print('Leaving out index', i, 'Mean:', sample_means[i], 'StDev:', sample_stds[i])
+# assert 1==0
 ### When we omit the last point, the mean and standard deviation change a lot (>10sigma)
 ### Ideally, omitting any one point wouldn't lead to a significant change, so this 
 ### strongly suggests something is wrong with the last data point

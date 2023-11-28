@@ -1,0 +1,104 @@
+------------------------------------------------------
+
+This log was generated with version 1.14.0 of PypeIt
+
+You are using scipy version=1.10.1
+You are using numpy version=1.24.3
+You are using astropy version=5.3.1
+
+------------------------------------------------------
+
+[INFO]    :: inputfiles.py 113 from_file() - Loading the reduction file
+[INFO]    :: inputfiles.py 155 from_file() - PypeIt input file loaded successfully.
+[INFO]    :: inputfiles.py 555 vet() - PypeIt file successfully vetted.
+[INFO]    :: pypeit.py 103 __init__() - Loaded spectrograph shane_kast_blue
+[INFO]    :: pypeit.py 104 __init__() - Setting configuration-specific parameters using b27.fits.gz.
+[INFO]    :: pypeit.py 120 __init__() - Compiling metadata
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b1.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b14.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b15.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b16.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b17.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b18.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b19.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b20.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b21.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b22.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b23.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b10.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b11.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b12.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b13.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b3.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b4.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b5.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b6.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b7.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b8.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b9.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b27.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b28.fits.gz
+[INFO]    :: metadata.py 203 _build() - Adding metadata for b24.fits.gz
+[WARNING] :: metadata.py 1368 get_frame_types() - Removing existing frametype and framebit columns.
+[INFO]    :: metadata.py 1375 get_frame_types() - Typing files
+[INFO]    :: metadata.py 1385 get_frame_types() - Using user-provided frame types.
+[INFO]    :: calibrations.py 1346 check_for_calibs() - Congrats!!  You passed the calibrations inspection!!
+[INFO]    :: metadata.py 691 unique_configurations() - Setup column already set.  Finding unique configurations.
+[INFO]    :: metadata.py 701 unique_configurations() - Found 1 unique configurations.
+[INFO]    :: calibrations.py 1231 association_summary() - Calibration association file written to: /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/shane_kast_blue_A.calib
+[INFO]    :: pypeit.py 155 __init__() - Setting reduction path to /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A
+[INFO]    :: pypeit.py 156 __init__() - Calibration frames saved to: /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations
+[INFO]    :: pypeit.py 157 __init__() - Science data output to: /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Science
+[INFO]    :: pypeit.py 158 __init__() - Quality assessment plots output to: /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/QA
+[INFO]    :: pypeit.py 321 reduce_all() - Found 1 standard frames to reduce.
+[INFO]    :: pypeit.py 326 reduce_all() - Found 2 science frames to reduce.
+[INFO]    :: pypeit.py 351 reduce_all() - Found 1 standard frames in calibration group 0.
+[INFO]    :: pypeit.py 541 reduce_exposure() - Reducing target Feige 66
+             Combining frames:
+             b24.fits.gz
+             
+[INFO]    :: pypeit.py 552 reduce_exposure() - Detectors to work on: [1]
+[INFO]    :: pypeit.py 557 reduce_exposure() - Reducing detector 1
+[INFO]    :: pypeit.py 695 calib_one() - Building/loading calibrations for detector 1
+[INFO]    :: calibrations.py 459 get_bias() - Preparing a Bias calibration frame.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b14.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b15.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b16.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b17.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b18.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b19.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b20.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b21.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b22.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b23.fits.gz.
+[INFO]    :: io.py 677 write_to_fits() - File written to: /home/lfinnerty/Teaching/Astro142/Astro142-SP23-Disc/Discussion15/reduced/shane_kast_blue_A/Calibrations/Bias_A_0_DET01.fits
+[WARNING] :: calibrations.py 486 get_dark() - No raw dark frames found and unable to identify a relevant processed calibration frame.  Continuing...
+[INFO]    :: calibrations.py 769 get_slits() - Creating edge tracing calibration frame using files: 
+             calibrations.py 771 get_slits() - b10.fits.gz
+             calibrations.py 771 get_slits() - b11.fits.gz
+             calibrations.py 771 get_slits() - b12.fits.gz
+             calibrations.py 771 get_slits() - b13.fits.gz
+             calibrations.py 771 get_slits() - b3.fits.gz
+             calibrations.py 771 get_slits() - b4.fits.gz
+             calibrations.py 771 get_slits() - b5.fits.gz
+             calibrations.py 771 get_slits() - b6.fits.gz
+             calibrations.py 771 get_slits() - b7.fits.gz
+             calibrations.py 771 get_slits() - b8.fits.gz
+             calibrations.py 771 get_slits() - b9.fits.gz
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b10.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b11.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b12.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b13.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b3.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b4.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b5.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b6.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b7.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b8.fits.gz.
+[INFO]    :: rawimage.py 530 process() - Performing basic image processing on b9.fits.gz.
+[INFO]    :: edgetrace.py 957 initial_trace() - --------------------------------------------------
+[INFO]    :: edgetrace.py 958 initial_trace() -              Initialize Edge Tracing              
+[INFO]    :: edgetrace.py 959 initial_trace() - --------------------------------------------------
+[INFO]    :: trace.py 87 detect_slit_edges() - Detecting slit edges in the trace image
+[INFO]    :: trace.py 130 detect_slit_edges() - Applying bad pixel mask
+[INFO]    :: trace.py 171 identify_traces() - Finding unique traces among detected edges.
