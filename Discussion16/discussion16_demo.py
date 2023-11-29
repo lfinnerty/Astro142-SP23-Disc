@@ -5,6 +5,7 @@ from time import sleep
 
 def myfunc(i):
 	print(i)
+	# raise ValueError
 	return i
 
 def producer(q, num, rest):
@@ -32,6 +33,8 @@ if __name__ == '__main__':
 		vals.append(myfunc(i))
 	print(vals)
 
+	# 
+
 	print('----------------------------------------')
 	print('Pool version')
 	### Pool version
@@ -41,6 +44,8 @@ if __name__ == '__main__':
 	pool.close()
 	pool.join()
 	print(result)
+
+	# assert 1==0
 
 	print('-----------------------------------------')
 	### Set up the queue processor
