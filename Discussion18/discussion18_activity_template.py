@@ -39,15 +39,3 @@ plt.show()
 ### use a constant a_nu
 ### Plot I_nu at s = 0 and s = 1. What happened? What happens if you change
 ### a_nu? I_nu(0)? 
-
-def func(t, I, j, a):
-	return j - a*I
-
-soln = integrate.solve_ivp(func, (0,1),1*np.ones(jnus.size),args=(jnus, 0.5),t_eval=np.linspace(0,1,100))
-print(soln.y.shape)
-plt.plot(soln.t, soln.y[15])
-plt.show()
-
-plt.plot(nus, soln.y[:,-1])
-plt.plot(nus, soln.y[:,0])
-plt.show()
