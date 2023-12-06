@@ -31,7 +31,6 @@ print('Quad:', result[0])
 result2 = integrate.romberg(mfunc,-8,8)
 print('Romberg:', result2)
 
-
 ### What if we want to solve an IVP? Consider a damped 
 ### harmonic oscillator: x'' + 2*b*w*x' + w**2 x = 0
 ### Set y1 = x, y2 = x', so that y1' = y2 and we can 
@@ -48,7 +47,7 @@ def func(t,y, b, w, a):
 
 ### Takes a callable, timespan, and initial values. Args 
 ### keyword takes extra arguments
-soln = integrate.solve_ivp(func, (0,100),(1,0),args=(0.05,1., 0.1),t_eval=np.linspace(0,100,1000))
+soln = integrate.solve_ivp(func, (0,100),(1,0),args=(0.05,1., 0.),t_eval=np.linspace(0,100,1000))
 
 plt.plot(soln.t, soln.y[0])
 plt.xlabel('Time')
