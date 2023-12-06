@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from numba import jit
-import sys
 
 if __name__ == '__main__':
 	### Consider the diffusion equation, partial x/partial t = d*laplace x.
@@ -17,32 +15,29 @@ if __name__ == '__main__':
 	xpts = np.linspace(0,20., num=nx)
 	dx = xpts[1] - xpts[0]
 
+	r = dt/dx**2
 	diff = 1.16
-	### Note that there's as stability requirement for the explicit finite differences
-	### solution, diff * dt/dx**2 < 0.5. I'd print it here to be sure. What happens if 
-	### we're above the stability threshold?
-	print(diff*dt/dx**2)
+	print(r*diff)
 
 	### Make temperature grid with inital conditions
 	temps = 273*np.ones(nx)
 	temps[-1] = 77.
 	newtemps = np.copy(temps)
 
-	plt.plot(temps)
-	plt.show()
 	### Let's animate this
 	plt.ion()
 	plt.plot(xpts, temps)
-
 	### Loop through times and update
-	t=0
-	while t < 200:
-		### FIXME updating temps goes here!
+	t = 0
+	while t < 120:
+		for x in range(1, nx-1):
+			newtemps[x] = (1-2*r*diff)*temps[x] + r*diff*(temps[x-1]+temps[x+1])
+		temps = np.copy(newtemps)
+		t+=dt
 
-
-		plt.imshow(temps,origin='lower')
+		plt.plot(xpts, temps)
 		plt.ylim(bottom=50,top=300)
 		plt.title('Time = '+ str(np.round(t,3)))
 		plt.draw()
-		plt.pause(0.0001)
+		plt.pause(0.001)
 		plt.clf()
